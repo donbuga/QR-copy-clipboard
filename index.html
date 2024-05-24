@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Copiar al Portapapeles</title>
+    <script>
+        function copyToClipboard() {
+            const textToCopy = 'Texto que deseas copiar';
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert('Texto copiado al portapapeles: ' + textToCopy);
+            }).catch(err => {
+                console.error('Error al copiar el texto: ', err);
+            });
+        }
+    </script>
+</head>
+<body onload="copyToClipboard()">
+    <p>El texto se ha copiado al portapapeles.</p>
+</body>
+</html>
